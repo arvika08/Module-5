@@ -1,12 +1,9 @@
-# Exp.No:22  
+# Exp.No:5.b
 ## Destructor
 
----
-
 ### AIM  
-To create a Python class `Student` with a destructor.
+To Write a python code to implement destructor in given code.
 
----
 
 ### ALGORITHM
 
@@ -20,12 +17,28 @@ To create a Python class `Student` with a destructor.
 ---
 
 ### PROGRAM
+class Type:
 
-```
+    def __new__(cls,*args,**kwargs):
+        print("new executing")
+        return super().__new__(cls)
+    def __init__(self):
+        print("init executing")
+    def __del__(self):
+        print("del executing")
+obj1=Type()
 
-```
+obj2=Type()
+
+del obj1
+
+del obj2
+
+print("end of program")
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/bf9d37d2-0f71-41d1-b4a3-7fe39fa8746f)
 
 
 ### RESULT
+Thus, python code to implement destructor is successfully implemented.
